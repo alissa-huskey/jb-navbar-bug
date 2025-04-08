@@ -7,6 +7,14 @@ This reproduces a bug in [sphinx-book-theme](https://github.com/executablebooks/
 which the `_config.yml` settings for `navbar_start`, `navbar_center` and `navbar_end` (as per
 [the docs](https://sphinx-book-theme.readthedocs.io/en/stable/sections/header.html)) are ignored.
 
+Status
+------
+
+Closed.
+
+I had `html_theme_options` in the wrong place in
+[`_config.yml`](https://github.com/alissa-huskey/jb-navbar-bug/blob/main/docs/_config.yml?plain=1#L34).
+
 Steps to Reproduce
 ------------------
 

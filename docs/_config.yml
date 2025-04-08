@@ -31,7 +31,7 @@ html:
   use_issues_button: true
   use_repository_button: true
 
-
+# BAD: this is ignored
 html_theme_options:
   navbar_start: ["mybutton.html"]
   navbar_center: ["mybutton.html"]
@@ -41,3 +41,9 @@ sphinx:
   config:
     html_theme: "sphinx_book_theme"
     templates_path: ["_templates"]
+
+    # GOOD: this works
+    html_theme_options:
+      navbar_start: ["mybutton.html"]
+      navbar_center: ["mybutton.html"]
+      navbar_end: ["mybutton.html"]
