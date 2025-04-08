@@ -23,30 +23,31 @@ Steps to Reproduce
 
 ### From Scratch
 
- 1. Create new python project: `poetry create NAME`
- 2. Install `jupyter-book`: `poetry add jupyter-book`
- 2. Initialize: `jb create docs`
- 3. Create `_templates directory`: `mkdir docs/_templates`
- 4. Add `mybutton.html` to `docs/_templates/`:
+ 1. Create new python project: `poetry create NAME && cd NAME`
+ 2. Start a poetry shell: `poetry shell`
+ 3. Install `jupyter-book`: `poetry add jupyter-book`
+ 4. Initialize: `jb create docs`
+ 5. Create `_templates directory`: `mkdir docs/_templates`
+ 6. Add `mybutton.html` to `docs/_templates/`:
  
     ```html
     <button class="mybutton">My test button</button>
     ```
- 5. Add `templates_path` to `docs/_config.py`:
+ 7. Add `templates_path` to `docs/_config.py`:
  
     ```yml
     sphinx:
       config:
         templates_path: ["_templates"]
     ```
- 6. Add `navbar_end` to `docs/_config.py`:
+ 8. Add `navbar_end` to `docs/_config.py`:
  
     ```yml
     html_theme_options:
       navbar_end: ["mybutton.html"]
     ```
- 7. Build the book: `jb build --all docs`
- 8. Start a html server: `python -m http.server --directory docs/_build/html 1313`
- 9. Go to URL `http://localhost:1313/`
-10. Look for `My test button`
-11. (Just to be sure.) In a Javascript console: `$(".mybutton")`
+ 9. Build the book: `jb build --all docs`
+10. Start a html server: `python -m http.server --directory docs/_build/html 1313`
+11. Go to URL `http://localhost:1313/`
+12. Look for `My test button`
+13. (Just to be sure.) In a Javascript console: `$(".mybutton")`
