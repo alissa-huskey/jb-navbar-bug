@@ -39,4 +39,5 @@ html_theme_options:
 
 sphinx:
   config:
+    html_theme: "sphinx_book_theme"
     templates_path: ["_templates"]

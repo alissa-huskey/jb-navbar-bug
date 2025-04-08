@@ -26,8 +26,8 @@ Steps to Reproduce
  1. Create new python project: `poetry create NAME && cd NAME`
  2. Start a poetry shell: `poetry shell`
  3. Install `jupyter-book`: `poetry add jupyter-book`
- 4. Initialize: `jb create docs`
- 5. Create `_templates directory`: `mkdir docs/_templates`
+ 4. Initialize book: `jb create docs`
+ 5. Create `_templates` directory: `mkdir docs/_templates`
  6. Add `mybutton.html` to `docs/_templates/`:
  
     ```html
